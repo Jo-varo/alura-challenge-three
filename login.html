@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/buttons.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/form.css" />
+    <link rel="stylesheet" href="styles/login.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header-logo-container">
+          <a class="header-logo" href="/">
+            <img
+              src="assets/icons/alurageek.svg"
+              alt="AluraGeek logo"
+              class="logo"
+            />
+          </a>
+        </div>
+        <div class="header-form-container">
+          <form class="header-form">
+            <input
+              type="text"
+              placeholder="¿Qué deseas buscar?"
+              required
+              maxlength="50"
+            />
+            <button class="header-form-button">
+              <img src="assets/icons/search.svg" alt="logo search" />
+            </button>
+          </form>
+        </div>
+        <div class="header-btn-container">
+          <a href="./login.html" class="btn btn-normal">Login</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="login">
+        <div class="form-login-container">
+          <h2>Iniciar Sesión</h2>
+          <form class="form login-form">
+            <div class="input-group">
+              <input
+                class="input-form"
+                id="email"
+                name="email"
+                placeholder="Correo Electrónico"
+                type="email"
+                required
+              />
+              <label for="email">Correo Electrónico</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
+            </div>
+            <div class="input-group">
+              <input
+                class="input-form"
+                id="password"
+                name="password"
+                placeholder="Contraseña"
+                type="password"
+                required
+              />
+              <label for="password">Contraseña</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
+            </div>
+            <button type="submit" class="btn btn-inverted form-button" disabled>
+              Entrar
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="all-products">
+        <div class="products-row">
+          <div class="products-row-header">
+            <h2 class="products-category-title">Todos los productos</h2>
+            <div class="products-category-link">
+              <a href="/" class="btn btn-inverted"> Agregar Producto </a>
+            </div>
+          </div>
+          <div class="products-row-body">
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto 1</h4>
+              <p class="product-price">$ 60,00</p>
+              <p class="product-id" href="">#111111</p>
+              <div class="product-buttons">
+                <div class="product-delete product-btn">
+                  <img src="/assets/icons/delete.svg" alt="delete icon" />
+                </div>
+                <div class="product-edit product-btn">
+                  <img src="/assets/icons/pen.svg" alt="edit icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="new-product">
+        <div class="newproduct-form-container">
+          <h2 class="form-title">Agregar nuevo producto</h2>
+          <form class="form newproduct-form">
+            <div class="input-group">
+              <input
+                class="input-form"
+                id="product-image"
+                name="product-image"
+                placeholder="URL de la image"
+                type="text"
+                required
+              />
+              <label for="product-image">URL de la imagen</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
+            </div>
+            <div class="input-group">
+              <input
+                class="input-form"
+                id="product-category"
+                name="product-category"
+                placeholder="Categoría"
+                type="text"
+                required
+              />
+              <label for="product-category">Categoría</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
+            </div>
+            <div class="input-group">
+              <input
+                class="input-form"
+                id="product-name"
+                name="product-name"
+                placeholder="Nombre del producto"
+                type="text"
+                required
+              />
+              <label for="product-name">Nombre del producto</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
+            </div>
+            <div class="input-group">
+              <input
+                class="input-form"
+                id="product-price"
+                name="product-price"
+                placeholder="Precio del producto"
+                type="text"
+                required
+              />
+              <label for="product-price">Precio del producto</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
+            </div>
+            <div class="input-group">
+              <textarea
+                class="input-form"
+                id="product-description"
+                name="product-description"
+                placeholder="Descripción del producto"
+                rows="2"
+                required
+                maxlength="300"
+              ></textarea>
+              <label for="product-description">Descripción del producto</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
+            </div>
+            <button type="submit" class="btn btn-inverted form-button" disabled>
+              Agregar Producto
+            </button>
+          </form>
+        </div>
+      </section>
+      <section class="product-detail">
+        <div class="single-product">
+          <div class="product-image"><img src="" alt="" /></div>
+          <div class="product-details">
+            <h2 class="product-title">Producto XYZ</h2>
+            <p class="product-price">$60.00</p>
+            <p class="product-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+              cumque nostrum eius voluptas officiis perferendis nemo eaque,
+              debitis tempora. Ea nulla, expedita a alias quidem, exercitationem
+              voluptas nesciunt qui nemo deserunt veniam ullam totam! Quo, quas.
+              Architecto amet nisi officiis quas quis eius. Veniam odit, illo
+              quia molestias placeat nisi.
+            </p>
+          </div>
+        </div>
+        <div class="similar-products">
+          <div class="products-row-header">
+            <h3 class="products-category-title">Productos similares</h3>
+          </div>
+          <div class="products-row-product">
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto XYZ</h4>
+              <p class="product-price">$ 60,00</p>
+              <a class="product-details product-link link" href=""
+                >Ver producto</a
+              >
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto XYZ</h4>
+              <p class="product-price">$ 60,00</p>
+              <a class="product-details product-link link" href=""
+                >Ver producto</a
+              >
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto XYZ</h4>
+              <p class="product-price">$ 60,00</p>
+              <a class="product-details product-link link" href=""
+                >Ver producto</a
+              >
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto XYZ</h4>
+              <p class="product-price">$ 60,00</p>
+              <a class="product-details product-link link" href=""
+                >Ver producto</a
+              >
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto XYZ</h4>
+              <p class="product-price">$ 60,00</p>
+              <a class="product-details product-link link" href=""
+                >Ver producto</a
+              >
+            </div>
+            <div class="product">
+              <img class="product-image" src="/" alt="product image" />
+              <h4 class="product-title">Producto XYZ</h4>
+              <p class="product-price">$ 60,00</p>
+              <a class="product-details product-link link" href=""
+                >Ver producto</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="sup-footer">
+        <div class="sup-footer-col">
+          <div class="footer-lognav-col">
+            <img
+              class="footer-logo"
+              src="assets/icons/alurageek.svg"
+              alt="logo AluraGeek"
+            />
+          </div>
+          <div class="footer-lognav-col">
+            <nav class="footer-nav">
+              <ul class="footer-nav-list">
+                <li><a href="/">Quienes somos</a></li>
+                <li><a href="/">Política de privacidad</a></li>
+                <li><a href="/">Programa de fidelidad</a></li>
+                <li><a href="/">Nuestras Tiendas</a></li>
+                <li><a href="/">Quiero ser franquiciado</a></li>
+                <li><a href="/">Anúncie aquí</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="sup-footer-col">
+          <h3>Hable con nosotros</h3>
+          <form class="form contact-form">
+            <div class="input-group">
+              <input
+                class="input-form"
+                id="name"
+                name="name"
+                placeholder="Nombre"
+                type="text"
+                required
+                maxlength="50"
+                pattern="[\s\S]{4,50}"
+              />
+              <label for="name">Nombre*</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
+            </div>
+            <div class="input-group">
+              <textarea
+                class="input-form"
+                id="message"
+                name="message"
+                placeholder="Descripción del producto"
+                rows="5"
+                required
+                maxlength="300"
+              ></textarea>
+              <label for="message">Descripción del producto*</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
+            </div>
+            <button type="submit" class="btn btn-inverted form-button" disabled>
+              Enviar Mensaje
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="bot-footer">
+        Desarrollado por
+        <a
+          class="author-credits"
+          href="https://github.com/Jo-varo"
+          target="_blank"
+        >
+          <div class="author-contact">
+            <img src="assets/icons/github.svg" alt="github logo" />
+            Jo-Varo
+          </div>
+        </a>
+        <a
+          class="author-credits"
+          href="https://www.linkedin.com/in/jovaro/"
+          target="_blank"
+        >
+          <div class="author-contact">
+            <img src="assets/icons/linkedin.svg" alt="linkedin logo" />
+            Jorge Vargas
+          </div>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

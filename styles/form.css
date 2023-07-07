@@ -1,0 +1,82 @@
+/* Form */
+.form .input-group {
+  position: relative;
+}
+
+.form .input-group:first-child {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  top: 0;
+  position: absolute;
+  color: gray;
+  padding: 1rem 0.5rem;
+  cursor: text;
+  transition: font-size 0.3s, padding 0.3s;
+  user-select: none;
+}
+
+.form .input-form::placeholder {
+  visibility: hidden;
+  color: #00000000;
+}
+
+.form .input-form {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: gray 3px solid;
+  padding: 1.3rem 0.5rem 0.7rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.form textarea {
+  resize: none;
+}
+
+.input-group .input-form:focus + label,
+.input-group .input-form:not(:placeholder-shown) + label {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.5rem;
+}
+
+.form .input-form:focus-visible {
+  outline: none;
+  border-bottom: var(--blue) solid 3px;
+}
+
+.form .input-form:focus-visible + label {
+  color: var(--blue);
+}
+
+.invalid-input-message {
+  color: red;
+  display: none;
+  position: absolute;
+  bottom: -1.3rem;
+}
+
+.form .invalid-input-group .input-form {
+  border-bottom: red solid 3px;
+}
+
+.form .invalid-input-group .input-form + label {
+  color: red;
+}
+
+.invalid-input-group .invalid-input-message {
+  display: block;
+}
+
+.form .btn.form-button {
+  margin-top: .5rem;
+  transition: filter 0.3s;
+}
+
+.form .btn.form-button:disabled {
+  filter: brightness(80%) contrast(90%);
+  cursor: unset;
+}

@@ -1,0 +1,146 @@
+/* Header */
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo-container {
+  flex: 1;
+}
+
+.header-logo {
+  display: block;
+}
+
+.header-logo .logo {
+  display: block;
+  height: 100%;
+}
+
+.header-form-container {
+  flex: 3;
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+.header-form {
+  position: relative;
+}
+
+.header-form input {
+  height: 50px;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  background-color: var(--background-gray);
+}
+
+.header-form .header-form-button {
+  width: 50px;
+  height: 50px;
+  border: none;
+  position: absolute;
+  border-radius: 50%;
+  right: 0px;
+  background-color: var(--background-gray);
+  transition: filter 0.3s, background-color 0.3s;
+}
+
+.header-form .header-form-button:hover {
+  background-color: var(--blue);
+  color: white;
+}
+
+.header-form .header-form-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.header-form .header-form-button:hover img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+    hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+.header-btn-container {
+  flex: 4;
+  text-align: end;
+}
+
+.header-btn-container a {
+  padding: 1rem 4rem;
+}
+
+/* Tablet View */
+@media (max-width: 768px) {
+  /* Header */
+  .header {
+    max-width: 700px;
+  }
+
+  .header-group {
+    width: 70%;
+  }
+
+  .header-logo-container {
+    flex: 1;
+  }
+
+  .header-logo {
+    margin-top: 0.25rem;
+    height: 2.75rem;
+  }
+
+  .header-form-container {
+    flex: 4;
+    padding-left: 1rem;
+  }
+
+  .header-form input {
+    padding: 0.5rem 1rem;
+  }
+
+  .header-btn-container {
+    flex: 3;
+  }
+
+  .header-btn-container a {
+    padding: 0.8rem 4rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 360px) {
+  .header {
+    max-width: 340px;
+  }
+
+  .header {
+    gap: 1.25rem;
+  }
+
+  .header-logo .logo {
+    width: 7.5rem;
+  }
+
+  .header-form-container {
+    order: 2;
+    padding: unset;
+  }
+
+  .header-form-container input {
+    display: none;
+  }
+
+  .header-form .header-form-button {
+    position: static;
+  }
+
+  .header-btn-container a {
+    padding: 0.8rem 2.5rem;
+  }
+}
