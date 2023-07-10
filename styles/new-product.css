@@ -1,0 +1,37 @@
+/* New Product */
+.new-product {
+  max-width: 1200px;
+  padding: 8rem 0;
+  margin: 0 auto;
+}
+
+.newproduct-form-container {
+  max-width: 740px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.newproduct-form-container .form-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.newproduct-form-container .form .input-group {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  /* New Product */
+  .new-product {
+    padding: 6rem 0;
+    max-width: 740px;
+  }
+}
+
+@media (max-width: 360px) {
+  /* New Product */
+  .new-product {
+    padding: 3rem 0;
+    max-width: 340px;
+  }
+}

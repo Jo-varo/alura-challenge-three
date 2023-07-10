@@ -6,6 +6,10 @@
   --blue: #2a7ae4;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   /* margin: 0 auto;  */
   box-sizing: border-box;

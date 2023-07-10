@@ -1,0 +1,116 @@
+/* Products */
+.all-products {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.all-products .link {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.products-row-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.products-row-header .products-category-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.products-row-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  margin-top: 1.25rem;
+  margin-bottom: -2.5rem;
+}
+
+.product {
+  width: 15%;
+  flex-shrink: 0;
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.product .product-image {
+  display: block;
+  aspect-ratio: 1/1;
+  width: 100%;
+  background-color: brown;
+}
+
+.product .product-title {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.product .product-price {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.product .product-details {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.product .product-id {
+  margin-top: 0.5rem;
+}
+
+.product .product-buttons {
+  display: flex;
+  justify-content: end;
+  gap: 1rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 0.3125rem;
+}
+
+.product .product-buttons .product-btn {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(353deg)
+    brightness(106%) contrast(101%);
+}
+
+.product .product-buttons .product-btn:hover {
+  filter: invert(39%) sepia(77%) saturate(2039%) hue-rotate(199deg)
+    brightness(92%) contrast(95%);
+}
+
+@media (max-width: 768px) {
+  /* Products */
+  .all-products {
+    padding: 2rem 0;
+    max-width: 740px;
+  }
+  .products-row-body {
+    margin-bottom: -1.5rem;
+  }
+  .product {
+    width: 23.5%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 360px) {
+  /* Products */
+  .all-products {
+    max-width: 340px;
+  }
+  .products-row-header {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+  }
+  .products-row-body {
+    gap: 4%;
+  }
+}

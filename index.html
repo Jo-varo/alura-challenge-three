@@ -54,15 +54,15 @@
         <div class="banner-content">
           <h2>Febrero Promocional</h2>
           <p>Productos selecionados con 33% de descuento</p>
-          <a href="/" class="btn btn-inverted">Ver Consolas</a>
+          <a href="#consoles" class="btn btn-inverted">Ver Consolas</a>
         </div>
       </section>
       <section class="products">
-        <div class="products-row">
+        <div class="products-row" id="star-wars">
           <div class="products-row-header">
             <h3 class="products-category-title">Star Wars</h3>
             <div class="products-category-link">
-              <a href="/" class="category-link link">
+              <a href="./products.html" class="category-link link">
                 Ver todo
                 <img src="assets/icons/arrow-right.svg" alt="arrow right" />
               </a>
@@ -143,11 +143,11 @@
             </div>
           </div>
         </div>
-        <div class="products-row">
+        <div class="products-row" id="consoles">
           <div class="products-row-header">
             <h3 class="products-category-title">Consolas</h3>
             <div class="products-category-link">
-              <a href="/" class="category-link link">
+              <a href="./products.html" class="category-link link">
                 Ver todo
                 <img src="assets/icons/arrow-right.svg" alt="arrow right" />
               </a>
@@ -228,11 +228,11 @@
             </div>
           </div>
         </div>
-        <div class="products-row">
+        <div class="products-row" id="diverses">
           <div class="products-row-header">
             <h3 class="products-category-title">Diversos</h3>
             <div class="products-category-link">
-              <a href="/" class="category-link link">
+              <a href="./products.html" class="category-link link">
                 Ver todo
                 <img src="assets/icons/arrow-right.svg" alt="arrow right" />
               </a>
@@ -349,8 +349,8 @@
                 placeholder="Nombre"
                 type="text"
                 required
-                maxlength="50"
-                pattern="[\s\S]{4,50}"
+                maxlength="40"
+                pattern="[\s\S]{4,40}"
               />
               <label for="name">Nombre*</label>
               <span class="invalid-input-message"
@@ -362,10 +362,11 @@
                 class="input-form"
                 id="message"
                 name="message"
-                placeholder="Escribe tu mensaje"
+                placeholder="Mensaje"
                 rows="5"
                 required
-                maxlength="300"
+                minlength="10"
+                maxlength="120"
               ></textarea>
               <label for="message">Escribe tu mensaje*</label>
               <span class="invalid-input-message"
@@ -402,5 +403,6 @@
         </a>
       </div>
     </footer>
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>
