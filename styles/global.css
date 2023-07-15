@@ -51,3 +51,7 @@ button {
 main {
   background-color: var(--background-gray);
 }
+
+.d-none{
+  display: none !important;
+}

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nuevo Producto</title>
+    <title>Iniciar Sesión</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/buttons.css" />
-    <link rel="stylesheet" href="styles/form.css" />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles/new-product.css" />
+    <link rel="stylesheet" href="styles/form.css" />
+    <link rel="stylesheet" href="styles/product.css" />
     <link rel="icon" type="image/svg+xml" href="assets/icons/ag-logo.svg" />
   </head>
   <body>
@@ -50,94 +50,23 @@
       </div>
     </header>
     <main>
-      <section class="new-product">
-        <div class="newproduct-form-container">
-          <h2 class="form-title">Agregar nuevo producto</h2>
-          <form class="form newproduct-form">
-            <div class="input-group">
-              <input
-                class="input-form"
-                id="product-image"
-                name="product-image"
-                placeholder="URL de la image"
-                type="text"
-                maxlength="100"
-                pattern="[\s\S]{4,100}"
-                required
-              />
-              <label for="product-image">URL de la imagen</label>
-              <span class="invalid-input-message"
-                >El campo no puede estar vacío</span
-              >
-            </div>
-            <div class="input-group">
-              <input
-                class="input-form"
-                id="product-category"
-                name="product-category"
-                placeholder="Categoría"
-                type="text"
-                maxlength="20"
-                pattern="[\s\S]{4,20}"
-                required
-              />
-              <label for="product-category">Categoría</label>
-              <span class="invalid-input-message"
-                >El campo no puede estar vacío</span
-              >
-            </div>
-            <div class="input-group">
-              <input
-                class="input-form"
-                id="product-name"
-                name="product-name"
-                placeholder="Nombre del producto"
-                type="text"
-                maxlength="30"
-                pattern="[\s\S]{4,30}"
-                required
-              />
-              <label for="product-name">Nombre del producto</label>
-              <span class="invalid-input-message"
-                >El campo no puede estar vacío</span
-              >
-            </div>
-            <div class="input-group">
-              <input
-                class="input-form"
-                id="product-price"
-                name="product-price"
-                placeholder="Precio del producto"
-                type="text"
-                maxlength="30"
-                pattern="[\s\S]{4,30}"
-                required
-              />
-              <label for="product-price">Precio del producto</label>
-              <span class="invalid-input-message"
-                >El campo no puede estar vacío</span
-              >
-            </div>
-            <div class="input-group">
-              <textarea
-                class="input-form"
-                id="product-description"
-                name="product-description"
-                placeholder="Descripción del producto"
-                rows="2"
-                required
-                minlength="10"
-                maxlength="150"
-              ></textarea>
-              <label for="product-description">Descripción del producto</label>
-              <span class="invalid-input-message"
-                >El campo no puede estar vacío</span
-              >
-            </div>
-            <button type="submit" class="btn btn-inverted form-button" disabled>
-              Agregar Producto
-            </button>
-          </form>
+      <section class="product-detail">
+        <div class="single-product">
+          <div class="product-image">
+            <img src="" alt="product image" />
+          </div>
+          <div class="product-details">
+            <h2 class="product-title">name</h2>
+            <p class="product-price">$00.00</p>
+            <p class="product-description">description
+            </p>
+          </div>
+        </div>
+        <div class="similar-products">
+          <div class="products-row-header">
+            <h3 class="products-category-title">Productos similares</h3>
+          </div>
+          <div class="products-row-product"></div>
         </div>
       </section>
     </main>

@@ -60,6 +60,7 @@
 
 .products-row-product {
   display: flex;
+  flex-wrap: wrap;
   gap: 2%;
   margin-top: 1.25rem;
 }

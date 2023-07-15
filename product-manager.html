@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AluraGeek</title>
+    <title>Gestor de Productos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles/form.css" />
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/footer.css" />
-    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/product-manager.css" />
     <link rel="icon" type="image/svg+xml" href="assets/icons/ag-logo.svg" />
   </head>
   <body>
@@ -50,49 +50,111 @@
       </div>
     </header>
     <main>
-      <section class="banner">
-        <div class="banner-content">
-          <h2>Febrero Promocional</h2>
-          <p>Productos selecionados con 33% de descuento</p>
-          <a href="#consoles" class="btn btn-inverted">Ver Consolas</a>
-        </div>
-      </section>
-      <section class="products">
-        <div class="products-row" id="star-wars">
-          <div class="products-row-header">
-            <h3 class="products-category-title">Star Wars</h3>
-            <div class="products-category-link">
-              <a href="./products.html" class="category-link link">
-                Ver todo
-                <img src="assets/icons/arrow-right.svg" alt="arrow right" />
-              </a>
+      <section class="product-manager">
+        <div class="product-manager-form-container">
+          <h2 class="form-title">Agregar nuevo producto</h2>
+          <form method="post" class="form product-manager-form">
+            <div class="input-group">
+              <input
+                class="input-form"
+                id="product-image"
+                name="product-image"
+                placeholder="URL de la image"
+                type="text"
+                maxlength="100"
+                pattern="[\s\S]{4,100}"
+                required
+              />
+              <label for="product-image">URL de la imagen</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
             </div>
-          </div>
-          <div class="products-row-product"></div>
-        </div>
-        <div class="products-row" id="consoles">
-          <div class="products-row-header">
-            <h3 class="products-category-title">Consolas</h3>
-            <div class="products-category-link">
-              <a href="./products.html" class="category-link link">
-                Ver todo
-                <img src="assets/icons/arrow-right.svg" alt="arrow right" />
-              </a>
+            <div class="input-group">
+              <input
+                class="input-form"
+                id="product-category"
+                name="product-category"
+                placeholder="Categoría"
+                type="text"
+                maxlength="20"
+                pattern="[\s\S]{4,20}"
+                required
+              />
+              <label for="product-category">Categoría</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
             </div>
-          </div>
-          <div class="products-row-product"></div>
-        </div>
-        <div class="products-row" id="diverses">
-          <div class="products-row-header">
-            <h3 class="products-category-title">Diversos</h3>
-            <div class="products-category-link">
-              <a href="./products.html" class="category-link link">
-                Ver todo
-                <img src="assets/icons/arrow-right.svg" alt="arrow right" />
-              </a>
+            <div class="input-group d-none">
+              <select
+                class="input-form"
+                id="product-categ"
+                name="product-categ"
+                placeholder="Categoría"
+                required
+              >
+                <option value="star-wars">Star Wars</option>
+                <option value="consoles" selected>Consolas</option>
+                <option value="diverses">Diversos</option>
+              </select>
+              <label for="product-categ">Categoría</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
             </div>
-          </div>
-          <div class="products-row-product"></div>
+            <div class="input-group">
+              <input
+                class="input-form"
+                id="product-name"
+                name="product-name"
+                placeholder="Nombre del producto"
+                type="text"
+                maxlength="30"
+                pattern="[\s\S]{4,30}"
+                required
+              />
+              <label for="product-name">Nombre del producto</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
+            </div>
+            <div class="input-group">
+              <input
+                class="input-form"
+                id="product-price"
+                name="product-price"
+                placeholder="Precio del producto"
+                type="text"
+                maxlength="30"
+                pattern="[\s\S]{4,30}"
+                required
+              />
+              <label for="product-price">Precio del producto</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
+            </div>
+            <div class="input-group">
+              <textarea
+                class="input-form"
+                id="product-description"
+                name="product-description"
+                placeholder="Descripción del producto"
+                rows="2"
+                required
+                minlength="10"
+                maxlength="150"
+              ></textarea>
+              <label for="product-description">Descripción del producto</label>
+              <span class="invalid-input-message"
+                >El campo no puede estar vacío</span
+              >
+            </div>
+            <button type="submit" class="btn btn-inverted form-button" disabled>
+              Agregar Producto
+            </button>
+          </form>
         </div>
       </section>
     </main>
@@ -130,8 +192,8 @@
                 placeholder="Nombre"
                 type="text"
                 required
-                maxlength="40"
-                pattern="[\s\S]{4,40}"
+                maxlength="50"
+                pattern="[\s\S]{4,50}"
               />
               <label for="name">Nombre*</label>
               <span class="invalid-input-message"

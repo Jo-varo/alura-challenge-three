@@ -113,4 +113,8 @@
   .products-row-body {
     gap: 4%;
   }
+  .product {
+    width: 48%;
+    margin-bottom: 1.5rem;
+  }
 }
