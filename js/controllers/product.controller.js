@@ -144,7 +144,7 @@ const showProductspageProducts = (products) => {
     const productsRow = document.querySelector(
       '.all-products .products-row .products-row-body'
     );
-    products.map((product) => {
+    products?.map((product) => {
       const newProduct = createProductsProduct(product);
       productsRow.appendChild(newProduct);
     });
