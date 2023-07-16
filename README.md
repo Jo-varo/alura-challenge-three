@@ -10,6 +10,8 @@ Desarrollado por **[Jo-Varo](https://github.com/Jo-varo)**.
 
 > Este proyecto usa una fuente personalizada de [Google Fonts](https://fonts.google.com/). Usa iconos de [Remix Icons](https://remixicon.com/), las imágenes son de [Unsplash](https://unsplash.com/).
 
+> La autenticación esta hecho con el servicio de Reqres.in
+
 ---
 
 ## Agradecimientos
