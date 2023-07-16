@@ -3,7 +3,7 @@ export const validInputs = {
     name: false,
     message: false,
   },
-  newproduct: {
+  'product-manager': {
     'product-image': false,
     'product-category': false,
     'product-name': false,

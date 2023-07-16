@@ -6,9 +6,9 @@ export default function validateForms() {
     validateForm('contact', contactForm);
   }
 
-  const newProductForm = document.querySelector('form.newproduct-form');
-  if (newProductForm) {
-    validateForm('newproduct', newProductForm);
+  const productManagerForm = document.querySelector('form.product-manager-form');
+  if (productManagerForm) {
+    validateForm('product-manager', productManagerForm);
   }
 
   const loginForm = document.querySelector('form.login-form');
