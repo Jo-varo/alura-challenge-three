@@ -1,0 +1,12 @@
+{
+  "name": "alurageek",
+  "version": "1.0.0",
+  "description": "> Este proyecto usa HTML5 y CSS 3",
+  "main": "index.js",
+  "scripts": {
+    "start-api": "json-server --watch data/db.json "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

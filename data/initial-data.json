@@ -1,0 +1,149 @@
+{
+  "products": [
+    {
+      "id": "f8d80dd7-8208-4625-8249-0b7bb2248035",
+      "name": "Star Wars 1",
+      "price": "29.99",
+      "image": "assets/images/SW1.jpg",
+      "description": "endi, sed nemo doloremque quidem magni minima eveniet dolorem sapiente corrupti, error quo voluptate",
+      "category": "star-wars"
+    },
+    {
+      "id": "996816df-19ef-4e0f-b2df-3682edcfd465",
+      "name": "Star Wars 2",
+      "price": "39.99",
+      "image": "assets/images/SW2.jpg",
+      "description": "liquam sed et distinctio illo veritatis sint laborum quam, quae, porro quia numquam doloremque bland",
+      "category": "star-wars"
+    },
+    {
+      "id": "b0ca8d09-9ab5-454c-8d1e-bd7bb5ea3fab",
+      "name": "Star Wars 3",
+      "price": "18.99",
+      "image": "assets/images/SW3.jpg",
+      "description": "tur adipisicing elit. Natus numquam sit unde, earum reprehenderit voluptates velit magni ducimus. Mo",
+      "category": "star-wars"
+    },
+    {
+      "id": "781eb843-0388-42ab-9a2c-d41b8f3a5a66",
+      "name": "Star Wars 4",
+      "price": "79.99",
+      "image": "assets/images/SW4.jpg",
+      "description": "l porro libero provident dignissimos corporis laboriosam accusantium fugiat alias earum veritatis cu",
+      "category": "star-wars"
+    },
+    {
+      "id": "ca9d4266-ac6a-473d-8311-8c1189820c6d",
+      "name": "Star Wars 5",
+      "price": "25.99",
+      "image": "assets/images/SW5.jpg",
+      "description": "itia ex asperiores suscipit, earum labore veritatis ipsum corrupti, voluptatem quod reiciendis, aliq",
+      "category": "star-wars"
+    },
+    {
+      "id": "640154b6-7525-4d7a-b7fe-71f1a664b39e",
+      "name": "Star Wars 6",
+      "price": "99.99",
+      "image": "assets/images/SW6.jpg",
+      "description": "lestias beatae veniam sunt repellendus excepturi, earum, maxime assumenda ab repudiandae vel quaerat",
+      "category": "star-wars"
+    },
+    {
+      "id": "6541f9a5-54bf-4873-92dd-ee91a8b766e6",
+      "name": "Console 1",
+      "price": "139.99",
+      "image": "assets/images/C-1.jpg",
+      "description": "o qui sapiente perferendis quae aliquam. Reiciendis in molestias beatae veniam sunt repellendus excepturi, earum, maxime assumenda ab repudiandae vel quaerat adipisci iure reprehenderit nam laborum si",
+      "category": "consoles"
+    },
+    {
+      "id": "33af01eb-018a-4a4a-ad81-af7e72208139",
+      "name": "Console 2",
+      "price": "259.99",
+      "image": "assets/images/C-2.jpg",
+      "description": "s ipsum corrupti, voluptatem quod reiciendis, aliquid ut sunt cum. Corporis illo qui sapiente perferendis quae aliquam. Reiciendis in molestias beatae veniam sunt repellendus excepturi, earum, maxime ",
+      "category": "consoles"
+    },
+    {
+      "id": "391b4637-6d79-4f8e-9774-aab41315dfed",
+      "name": "Console 3",
+      "price": "399.99",
+      "image": "assets/images/C-3.jpg",
+      "description": "ferendis quae aliquam. Reiciendis in molestias beatae veniam sunt repellendus excepturi, earum, maxime assumenda ab repudiandae vel quaerat adipisci iure reprehenderit nam laborum sit consectetur quib",
+      "category": "consoles"
+    },
+    {
+      "id": "a0cf781f-7388-4857-991d-3d7dc97733ea",
+      "name": "Console 4",
+      "price": "299.99",
+      "image": "assets/images/C-4.jpg",
+      "description": "remque blanditiis consequuntur fuga cumque ipsum? Ipsam nobis inventore neque alias incidunt explicabo aperiam illum voluptatum delectus dolor quaerat optio provident earum, unde nisi itaque magnam il",
+      "category": "consoles"
+    },
+    {
+      "id": "b41a20f8-da2c-440d-8494-4ae749ef0381",
+      "name": "Console 5",
+      "price": "159.99",
+      "image": "assets/images/C-5.jpg",
+      "description": "onem necessitatibus! Officiis neque, aliquam sed et distinctio illo veritatis sint laborum quam, quae, porro quia numquam doloremque blanditiis consequuntur fuga cumque ipsum? Ipsam nobis inventore ne",
+      "category": "consoles"
+    },
+    {
+      "id": "b5f06a22-4901-45a2-8e08-43626d2491cc",
+      "name": "Console 6",
+      "price": "189.99",
+      "image": "assets/images/C-6.jpg",
+      "description": " sed nemo doloremque quidem magni minima eveniet dolorem sapiente corrupti, error quo voluptate dolore. Iusto dicta quas officia magni ab, impedit nihil fugiat voluptatem? Mollitia sint nostrum harum ",
+      "category": "consoles"
+    },
+
+    {
+      "id": "cfaf7e17-7303-4e32-b312-fc2b9f747cc8",
+      "name": "Diverse 1",
+      "price": "5.99",
+      "image": "assets/images/D-1.jpg",
+      "description": "t amet consectetur adipisicing elit. Natus numquam sit unde, earum reprehenderit voluptates velit magni ducimus. Mollitia ex asperiores suscipit, earum labore veritatis ipsum corrupti, voluptatem quod",
+      "category": "diverses"
+    },
+    {
+      "id": "79d49baa-b5a8-4de2-89e6-59d29783ee08",
+      "name": "Diverse 2",
+      "price": "9.99",
+      "image": "assets/images/D-2.jpg",
+      "description": "oremque blanditiis consequuntur fuga cumque ipsum? Ipsam nobis inventore neque alias incidunt explicabo aperiam illum voluptatum delectus dolor quaerat optio provident earum, unde nisi itaque magnam i",
+      "category": "diverses"
+    },
+    {
+      "id": "31f45904-8af2-4dac-98a6-71e6d440d390",
+      "name": "Diverse 3",
+      "price": "19.99",
+      "image": "assets/images/D-3.jpg",
+      "description": " asperiores suscipit, earum labore veritatis ipsum corrupti, voluptatem quod reiciendis, aliquid ut sunt cum. Corporis illo qui sapiente perferendis quae aliquam. Reiciendis in molestias beatae veniam",
+      "category": "diverses"
+    },
+    {
+      "id": "ee1090f0-14e1-4549-a161-b76cdc5b72f6",
+      "name": "Diverse 4",
+      "price": "39.99",
+      "image": "assets/images/D-4.jpg",
+      "description": "aboriosam accusantium fugiat alias earum veritatis cupiditate doloremque nihil debitis deleniti explicabo, totam exercitationem necessitatibus! Officiis neque, aliquam sed et distinctio illo veritatis",
+      "category": "diverses"
+    },
+    {
+      "id": "5f3c01ce-c1bc-4e74-a0d0-6a5b32c10d86",
+      "name": "Diverse 5",
+      "price": "499.99",
+      "image": "assets/images/D-5.jpg",
+      "description": " laborum sit consectetur quibusdam impedit. Perspiciatis maxime inventore soluta a vel porro libero provident dignissimos corporis laboriosam accusantium fugiat alias earum veritatis cupiditate dolore",
+      "category": "diverses"
+    },
+    {
+      "id": "4921bb22-ac05-4485-8c51-08d2bbc99d97",
+      "name": "Diverse 6",
+      "price": "12.99",
+      "image": "assets/images/D-6.jpg",
+      "description": "tia ex asperiores suscipit, earum labore veritatis ipsum corrupti, voluptatem quod reiciendis, aliquid ut sunt cum. Corporis illo qui sapiente perferendis quae aliquam. Reiciendis in molestias beatae ",
+      "category": "diverses"
+    }
+  ]
+}
