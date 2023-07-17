@@ -127,6 +127,9 @@
   .product {
     width: 23.5%;
   }
+  .product:nth-last-child(-n + 2) {
+    display: none;
+  }
 }
 
 /* Mobile View */
@@ -156,8 +159,5 @@
   }
   .product:nth-child(-n + 2) {
     margin-bottom: 1.5rem;
-  }
-  .product:nth-last-child(-n + 2) {
-    display: none;
   }
 }
