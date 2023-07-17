@@ -42,6 +42,7 @@
             <button class="header-form-button">
               <img src="assets/icons/search.svg" alt="logo search" />
             </button>
+            <div class="search-results-container d-none"></div>
           </form>
         </div>
         <div class="header-btn-container">
@@ -192,8 +193,8 @@
                 placeholder="Nombre"
                 type="text"
                 required
-                maxlength="50"
-                pattern="[\s\S]{4,50}"
+                maxlength="40"
+                pattern="[\s\S]{4,40}"
               />
               <label for="name">Nombre*</label>
               <span class="invalid-input-message"

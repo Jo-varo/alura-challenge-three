@@ -22,17 +22,19 @@ const loadProducts = async () => {
 };
 
 export const managePageRoutes = async () => {
+  const allProducts = await loadProducts();
+
   const url = new URL(window.location);
   const path = url.pathname;
 
+  enableSearchProductFeature(allProducts);
+
   if (path === '/') {
-    const allProducts = await loadProducts();
     const sortedProducts = sortProductsByCategory(allProducts);
     showHomepageProducts(sortedProducts);
   }
 
   if (path === '/products.html') {
-    const allProducts = await loadProducts();
     showProductspageProducts(allProducts);
   }
 
@@ -50,7 +52,6 @@ export const managePageRoutes = async () => {
   }
 
   if (path === '/product.html') {
-    const allProducts = await loadProducts();
     const id = url.searchParams.get('id');
     const filteredProducts = allProducts.filter((product) => product.id !== id);
     const sortedProducts = sortProductsByCategory(filteredProducts);
@@ -281,20 +282,56 @@ const showSingleProductpage = async (id, products) => {
   renderSimilarProducts();
 };
 
-const searchProduct = (products) => {
+const enableSearchProductFeature = (products) => {
   const searchInput = document.querySelector(
     '.header-form-container form input'
   );
+  const searchResultsContainer = document.querySelector(
+    'header .search-results-container'
+  );
+
   searchInput.oninput = async (e) => {
-    const query = searchInput.value.toLowerCase();
-    const searchResult = [];
-    products.map((product) => {
-      if (product.name.toLowerCase().includes(query)) {
-        searchResult.push(product);
-      }
-    });
-    console.log(searchResult);
+    const query = e.target.value.toLowerCase();
+    const productResults = searchProduct(products, query, 6);
+    renderResults(searchResultsContainer, productResults);
   };
+
+  searchInput.onfocus = () => {
+    searchResultsContainer.classList.remove('d-none');
+  };
+  searchInput.onblur = () => {
+    setTimeout(() => {
+      searchResultsContainer.classList.add('d-none');
+    }, 100);
+  };
+
+  const createSearchResultElement = ({ id, name, image, price }) => {
+    const searchResult = document.createElement('a');
+    searchResult.classList.add('search-result');
+    searchResult.href = `/product.html?id=${id}`;
+    const content = `<div class="search-result-product">
+                      <img src="${image}" alt="product-image" class="product-image" />
+                      <p class="product-name">${name}</p>
+                      <p class="product-price">$${price}</p>
+                    </div>`;
+    searchResult.innerHTML = content;
+    return searchResult;
+  };
+
+  const renderResults = (container, results = []) => {
+    container.innerHTML = '';
+    results.map((product) => {
+      container.appendChild(createSearchResultElement(product));
+    });
+  };
+};
+
+const searchProduct = (products, query, quantityResult) => {
+  if (query.length < 3) return;
+  const searchResult = products.filter((product) =>
+    product.name.toLowerCase().includes(query)
+  );
+  return searchResult.slice(0, quantityResult);
 };
 
 const createProductElement = ({ id, name, price, image }) => {
