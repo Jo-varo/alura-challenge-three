@@ -5,6 +5,7 @@ import {
   getProduct,
   getProducts,
 } from '../api/product.api.js';
+import { URL_PROJECT_SUFFIX } from '../constants/config.js';
 import { validInputs } from '../forms/validInputs.js';
 import {
   checkRenderManageProductButtons,
@@ -52,7 +53,6 @@ const sortProductsByCategory = (products = []) => {
   return result;
 };
 
-
 const createProductElement = ({ id, name, price, image }) => {
   const product = document.createElement('div');
   product.classList.add('product');
@@ -72,7 +72,7 @@ const createProductElement = ({ id, name, price, image }) => {
 };
 
 const showHomepageProducts = (products) => {
-  console.log({products});
+  console.log({ products });
   const renderProducts = (category, productsByCategory) => {
     console.log(category, productsByCategory);
     const categoryRow = document.querySelector(
@@ -353,10 +353,10 @@ export const managePageRoutes = async () => {
   console.log(allProducts);
 
   const url = new URL(window.location);
-  const path = url.pathname;
+  const path = url.pathname.replace(URL_PROJECT_SUFFIX, '');
 
   enableSearchProductFeature(allProducts);
-  console.log({allProducts,path});
+  console.log({ allProducts, path });
   if (path === '/') {
     console.log(allProducts);
     showHomepageProducts(allProducts);
