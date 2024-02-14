@@ -72,6 +72,7 @@ const createProductElement = ({ id, name, price, image }) => {
 };
 
 const showHomepageProducts = (products) => {
+  console.log({products});
   const renderProducts = (category, productsByCategory) => {
     console.log(category, productsByCategory);
     const categoryRow = document.querySelector(
@@ -356,6 +357,7 @@ export const managePageRoutes = async () => {
   enableSearchProductFeature(allProducts);
 
   if (path === '/') {
+    console.log(allProducts);
     showHomepageProducts(allProducts);
   }
 
