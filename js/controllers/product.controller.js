@@ -18,10 +18,11 @@ const loadProducts = async () => {
   } catch (error) {
     console.log(error);
   }
-  return allProducts;
+  return Object.keys(allProducts).length !== 0 ? allProducts : [];
 };
 
 export const managePageRoutes = async () => {
+  console.log('test 4 github');
   const allProducts = await loadProducts();
 
   const url = new URL(window.location);
@@ -30,8 +31,7 @@ export const managePageRoutes = async () => {
   enableSearchProductFeature(allProducts);
 
   if (path === '/') {
-    const sortedProducts = sortProductsByCategory(allProducts);
-    showHomepageProducts(sortedProducts);
+    showHomepageProducts(allProducts);
   }
 
   if (path === '/products.html') {
@@ -60,6 +60,9 @@ export const managePageRoutes = async () => {
 };
 
 const sortProductsByCategory = (products = []) => {
+  //There was no response from api
+  if (products.length <= 0) return {};
+
   const result = { consoles: [], 'star-wars': [], diverses: [] };
 
   const addToResult = (product, category) => {
@@ -79,19 +82,31 @@ const sortProductsByCategory = (products = []) => {
 
 const showHomepageProducts = (products) => {
   const renderProducts = (category, sortedProducts) => {
-    //Will render only 6 elements per category
     const categoryRow = document.querySelector(
       `#${category} .products-row-product`
     );
+    const productRowMessage = categoryRow.querySelector(
+      '.products-row-product-message'
+    );
+
+    //There was no response from api
+    if (Object.keys(products).length === 0) {
+      productRowMessage.innerText = 'No hay productos';
+      return;
+    }
+    productRowMessage.remove()
+
+    //Will render only 6 elements per category
     sortedProducts[category].map((product) => {
       const newProduct = createProductElement(product);
       categoryRow.appendChild(newProduct);
     });
   };
 
-  renderProducts('star-wars', products);
-  renderProducts('consoles', products);
-  renderProducts('diverses', products);
+  const sortedProducts = sortProductsByCategory(products);
+  renderProducts('star-wars', sortedProducts);
+  renderProducts('consoles', sortedProducts);
+  renderProducts('diverses', sortedProducts);
 };
 
 const showProductspageProducts = (products) => {
