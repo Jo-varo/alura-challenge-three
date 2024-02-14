@@ -1,4 +1,4 @@
-import { login } from "../api/login.api.js";
+import { login } from '../api/login.api.js';
 
 const submitLogin = async (e) => {
   e.preventDefault();
@@ -7,6 +7,10 @@ const submitLogin = async (e) => {
 
   try {
     const { token } = await login(userData);
+    if (!token) {
+      alert('Invalid user');
+      throw new Error('Invalid user');
+    }
     localStorage.setItem('loginToken', token);
     window.location.replace('/');
   } catch (err) {

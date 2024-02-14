@@ -18,6 +18,7 @@ const loadProducts = async () => {
     allProducts = await getProducts();
   } catch (error) {
     console.log(error);
+    return [];
   }
   return Object.keys(allProducts).length !== 0 ? allProducts : [];
 };
@@ -81,16 +82,14 @@ const sortProductsByCategory = (products = []) => {
 
 const showHomepageProducts = (products) => {
   const renderProducts = (category, productsByCategory) => {
-    console.log(category, productsByCategory);
     const categoryRow = document.querySelector(
       `#${category} .products-row-product`
     );
     const productRowMessage = categoryRow.querySelector(
       '.products-row-product-message'
     );
-    console.log(category, productsByCategory);
 
-    //There was no response from api
+    //There was no response from api or there aren't items
     if (productsByCategory.length === 0) {
       productRowMessage.innerText = 'No hay productos';
       return;
@@ -161,6 +160,17 @@ const showProductspageProducts = (products) => {
     const productsRow = document.querySelector(
       '.all-products .products-row .products-row-body'
     );
+
+    const productRowMessage = productsRow.querySelector(
+      '.products-row-body-message'
+    );
+    //There was no response from api or there aren't items
+    if (products.length === 0) {
+      productRowMessage.innerText = 'No hay productos';
+      return;
+    }
+    productRowMessage.remove();
+
     products?.map((product) => {
       const newProduct = createProductsProduct(product);
       productsRow.appendChild(newProduct);

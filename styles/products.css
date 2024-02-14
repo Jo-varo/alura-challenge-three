@@ -29,6 +29,11 @@
   margin-bottom: -2.5rem;
 }
 
+.products-row-body-message {
+  font-size: 1.6rem;
+  margin-top: 0.625rem;
+}
+
 .product {
   width: 15%;
   flex-shrink: 0;
