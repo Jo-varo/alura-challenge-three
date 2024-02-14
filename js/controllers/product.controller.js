@@ -22,13 +22,13 @@ const loadProducts = async () => {
 };
 
 export const managePageRoutes = async () => {
-  console.log('test 4 github');
   const allProducts = await loadProducts();
 
   const url = new URL(window.location);
   const path = url.pathname;
 
   enableSearchProductFeature(allProducts);
+  console.log(allProducts);
 
   if (path === '/') {
     showHomepageProducts(allProducts);
@@ -60,10 +60,9 @@ export const managePageRoutes = async () => {
 };
 
 const sortProductsByCategory = (products = []) => {
-  //There was no response from api
-  if (products.length <= 0) return {};
-
   const result = { consoles: [], 'star-wars': [], diverses: [] };
+  //There was no response from api
+  if (products.length <= 0) return result;
 
   const addToResult = (product, category) => {
     if (product.category === category && result[category].length < 6)
@@ -81,7 +80,7 @@ const sortProductsByCategory = (products = []) => {
 };
 
 const showHomepageProducts = (products) => {
-  const renderProducts = (category, sortedProducts) => {
+  const renderProducts = (category, productsByCategory) => {
     const categoryRow = document.querySelector(
       `#${category} .products-row-product`
     );
@@ -90,23 +89,23 @@ const showHomepageProducts = (products) => {
     );
 
     //There was no response from api
-    if (Object.keys(products).length === 0) {
+    if (productsByCategory.length === 0) {
       productRowMessage.innerText = 'No hay productos';
       return;
     }
     productRowMessage.remove()
 
     //Will render only 6 elements per category
-    sortedProducts[category].map((product) => {
+    productsByCategory.map((product) => {
       const newProduct = createProductElement(product);
       categoryRow.appendChild(newProduct);
     });
   };
 
   const sortedProducts = sortProductsByCategory(products);
-  renderProducts('star-wars', sortedProducts);
-  renderProducts('consoles', sortedProducts);
-  renderProducts('diverses', sortedProducts);
+  renderProducts('star-wars', sortedProducts['star-wars']);
+  renderProducts('consoles', sortedProducts['consoles']);
+  renderProducts('diverses', sortedProducts['diverses']);
 };
 
 const showProductspageProducts = (products) => {
