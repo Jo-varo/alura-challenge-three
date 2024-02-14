@@ -22,15 +22,41 @@ const loadProducts = async () => {
   return Object.keys(allProducts).length !== 0 ? allProducts : [];
 };
 
-const getProductShapeForAPI = (formProductData, productID) => {
-  return {
-    id: productID || crypto.randomUUID(),
-    name: formProductData['product-name'],
-    price: formProductData['product-price'],
-    image: formProductData['product-image'],
-    description: formProductData['product-description'],
-    category: formProductData['product-category'],
-  };
+export const managePageRoutes = async () => {
+  const allProducts = await loadProducts();
+
+  const url = new URL(window.location);
+  const path = url.pathname.replace(URL_PROJECT_SUFFIX, '');
+
+  enableSearchProductFeature(allProducts);
+
+  if (path === '/') {
+    showHomepageProducts(allProducts);
+  }
+
+  if (path === '/products.html') {
+    showProductspageProducts(allProducts);
+  }
+
+  if (path === '/product-manager.html') {
+    if (!isAvailableToken()) {
+      window.location.replace('/');
+    }
+
+    const id = url.searchParams.get('id');
+    if (id) {
+      handleEditProducts(id);
+      return;
+    }
+    handleAddProducts();
+  }
+
+  if (path === '/product.html') {
+    const id = url.searchParams.get('id');
+    const filteredProducts = allProducts.filter((product) => product.id !== id);
+    const sortedProducts = sortProductsByCategory(filteredProducts);
+    showSingleProductpage(id, sortedProducts);
+  }
 };
 
 const sortProductsByCategory = (products = []) => {
@@ -53,26 +79,7 @@ const sortProductsByCategory = (products = []) => {
   return result;
 };
 
-const createProductElement = ({ id, name, price, image }) => {
-  const product = document.createElement('div');
-  product.classList.add('product');
-  const content = `
-    <img
-      class="product-image"
-      src="${image}"
-      alt="product image"
-    />
-    <h4 class="product-title">${name}</h4>
-    <p class="product-price">$ ${price}</p>
-    <a class="product-details product-link link" href="/product.html?id=${id}"
-      >Ver producto</a
-    >`;
-  product.innerHTML = content;
-  return product;
-};
-
 const showHomepageProducts = (products) => {
-  console.log({ products });
   const renderProducts = (category, productsByCategory) => {
     console.log(category, productsByCategory);
     const categoryRow = document.querySelector(
@@ -171,7 +178,7 @@ const handleAddProducts = () => {
     const formData = new FormData(e.target);
     const productData = Object.fromEntries(formData.entries());
     try {
-      await addProduct(getProductShapeForAPI(productData));
+      await addProduct(getProductForAPI(productData));
       window.location.replace('/products.html');
     } catch (error) {
       console.log(error);
@@ -226,7 +233,7 @@ const handleEditProducts = async (id) => {
 
   const handleEdit = async (productData, id) => {
     try {
-      await editProduct(id, getProductShapeForAPI(productData, id));
+      await editProduct(id, getProductForAPI(productData, id));
       window.location.replace('/products.html');
     } catch (error) {
       console.log(error);
@@ -294,14 +301,6 @@ const showSingleProductpage = async (id, products) => {
 };
 
 // Search products on searching bar
-const searchProduct = (products, query, quantityResult) => {
-  if (query.length < 3) return;
-  const searchResult = products.filter((product) =>
-    product.name.toLowerCase().includes(query)
-  );
-  return searchResult.slice(0, quantityResult);
-};
-
 const enableSearchProductFeature = (products) => {
   const searchInput = document.querySelector(
     '.header-form-container form input'
@@ -348,41 +347,39 @@ const enableSearchProductFeature = (products) => {
   };
 };
 
-export const managePageRoutes = async () => {
-  const allProducts = await loadProducts();
-  console.log(allProducts);
+const searchProduct = (products, query, quantityResult) => {
+  if (query.length < 3) return;
+  const searchResult = products.filter((product) =>
+    product.name.toLowerCase().includes(query)
+  );
+  return searchResult.slice(0, quantityResult);
+};
 
-  const url = new URL(window.location);
-  const path = url.pathname.replace(URL_PROJECT_SUFFIX, '');
+const createProductElement = ({ id, name, price, image }) => {
+  const product = document.createElement('div');
+  product.classList.add('product');
+  const content = `
+    <img
+      class="product-image"
+      src="${image}"
+      alt="product image"
+    />
+    <h4 class="product-title">${name}</h4>
+    <p class="product-price">$ ${price}</p>
+    <a class="product-details product-link link" href="/product.html?id=${id}"
+      >Ver producto</a
+    >`;
+  product.innerHTML = content;
+  return product;
+};
 
-  enableSearchProductFeature(allProducts);
-  console.log({ allProducts, path });
-  if (path === '/') {
-    console.log(allProducts);
-    showHomepageProducts(allProducts);
-  }
-
-  if (path === '/products.html') {
-    showProductspageProducts(allProducts);
-  }
-
-  if (path === '/product-manager.html') {
-    if (!isAvailableToken()) {
-      window.location.replace('/');
-    }
-
-    const id = url.searchParams.get('id');
-    if (id) {
-      handleEditProducts(id);
-      return;
-    }
-    handleAddProducts();
-  }
-
-  if (path === '/product.html') {
-    const id = url.searchParams.get('id');
-    const filteredProducts = allProducts.filter((product) => product.id !== id);
-    const sortedProducts = sortProductsByCategory(filteredProducts);
-    showSingleProductpage(id, sortedProducts);
-  }
+const getProductForAPI = (formProductData, productID) => {
+  return {
+    id: productID || crypto.randomUUID(),
+    name: formProductData['product-name'],
+    price: formProductData['product-price'],
+    image: formProductData['product-image'],
+    description: formProductData['product-description'],
+    category: formProductData['product-category'],
+  };
 };
