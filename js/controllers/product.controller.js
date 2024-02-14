@@ -246,6 +246,8 @@ const showSingleProductpage = async (id, products) => {
     product = await getProduct(id);
   } catch (error) {
     console.log(error);
+    alert('Algo salió mal, intentálo otra vez');
+    window.location.replace('/');
   }
 
   const renderDetailedProduct = ({ image, name, price, description }) => {
@@ -262,10 +264,10 @@ const showSingleProductpage = async (id, products) => {
     const descriptionElement = productContainer.querySelector(
       '.product-details .product-description'
     );
-    imageElement.src = image;
-    titleElement.innerText = name;
-    priceElement.innerText = `$${price}`;
-    descriptionElement.innerText = description;
+    imageElement.src = image || '/';
+    titleElement.innerText = name || 'Product not found';
+    priceElement.innerText = `$${price || '0.00'}`;
+    descriptionElement.innerText = description || 'Product not found';
   };
 
   const renderSimilarProducts = () => {
@@ -282,6 +284,7 @@ const showSingleProductpage = async (id, products) => {
   renderSimilarProducts();
 };
 
+// Search products on searching bar
 const enableSearchProductFeature = (products) => {
   const searchInput = document.querySelector(
     '.header-form-container form input'
@@ -290,7 +293,7 @@ const enableSearchProductFeature = (products) => {
     'header .search-results-container'
   );
 
-  searchInput.oninput = async (e) => {
+  searchInput.oninput = (e) => {
     const query = e.target.value.toLowerCase();
     const productResults = searchProduct(products, query, 6);
     renderResults(searchResultsContainer, productResults);
@@ -320,7 +323,9 @@ const enableSearchProductFeature = (products) => {
 
   const renderResults = (container, results = []) => {
     container.innerHTML = '';
-    results.map((product) => {
+    container.style.borderRadius =
+      results.length > 0 ? '25px 25px 10px 10px' : '25px';
+    results?.map((product) => {
       container.appendChild(createSearchResultElement(product));
     });
   };
