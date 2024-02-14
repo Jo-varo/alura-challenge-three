@@ -350,12 +350,13 @@ const enableSearchProductFeature = (products) => {
 
 export const managePageRoutes = async () => {
   const allProducts = await loadProducts();
+  console.log(allProducts);
 
   const url = new URL(window.location);
   const path = url.pathname;
 
   enableSearchProductFeature(allProducts);
-
+  console.log({allProducts,path});
   if (path === '/') {
     console.log(allProducts);
     showHomepageProducts(allProducts);
