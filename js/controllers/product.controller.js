@@ -28,7 +28,6 @@ export const managePageRoutes = async () => {
   const path = url.pathname;
 
   enableSearchProductFeature(allProducts);
-  console.log(allProducts);
 
   if (path === '/') {
     showHomepageProducts(allProducts);
@@ -81,19 +80,21 @@ const sortProductsByCategory = (products = []) => {
 
 const showHomepageProducts = (products) => {
   const renderProducts = (category, productsByCategory) => {
+    console.log(category, productsByCategory);
     const categoryRow = document.querySelector(
       `#${category} .products-row-product`
     );
     const productRowMessage = categoryRow.querySelector(
       '.products-row-product-message'
     );
+    console.log(category, productsByCategory);
 
     //There was no response from api
     if (productsByCategory.length === 0) {
       productRowMessage.innerText = 'No hay productos';
       return;
     }
-    productRowMessage.remove()
+    productRowMessage.remove();
 
     //Will render only 6 elements per category
     productsByCategory.map((product) => {
